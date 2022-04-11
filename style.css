@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #6e5c62;
+  color: gainsboro;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+#vocabulo {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: sans-serif;
+  color: #fafaff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+}
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5em;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.letter {
+  background-color: transparent;
+  border: 0.125em solid #4c4347;
+  border-radius: 10%;
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#teclado-container {
+  height: 200px;
+}
+
+#teclado-linha {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+#teclado-linha button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 58px;
+  cursor: pointer;
+  background-color: rgb(59, 59, 59);
+  color: #fafaff;
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  border-radius: 10%;
+  user-select: none;
+}
+
+#teclado-linha button.wide {
+  flex-grow: 2;
+}
+
+.spacer {
+  flex-grow: 3;
+}
